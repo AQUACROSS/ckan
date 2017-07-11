@@ -93,22 +93,21 @@ class LicenseRegister(object):
             self.load_licenses(group_url)
         else:
             default_license_list = [
-#                LicenseNotSpecified(),
-#                LicenseOpenDataCommonsPDDL(),
-#                LicenseOpenDataCommonsOpenDatabase(),
-#                LicenseOpenDataAttribution(),
+                LicenseNotSpecified(),
+                LicenseOpenDataCommonsPDDL(),
+                LicenseOpenDataCommonsOpenDatabase(),
+                LicenseOpenDataAttribution(),
                 LicenseCreativeCommonsZero(),
                 LicenseCreativeCommonsAttribution(),
                 LicenseCreativeCommonsAttributionShareAlike(),
-#                LicenseGNUFreeDocument(),
-#                LicenseOtherOpen(),
-#                LicenseOtherPublicDomain(),
-#                LicenseOtherAttribution(),
-#                LicenseOpenGovernment(),
+                LicenseGNUFreeDocument(),
+                LicenseOtherOpen(),
+                LicenseOtherPublicDomain(),
+                LicenseOtherAttribution(),
+                LicenseOpenGovernment(),
                 LicenseCreativeCommonsNonCommercial(),
-                LicenseCreativeCommonsNonCommercialShareAlike(),
-#                LicenseOtherNonCommercial(),
-#                LicenseOtherClosed(),
+                LicenseOtherNonCommercial(),
+                LicenseOtherClosed(),
                 ]
             self._create_license_list(default_license_list)
 
@@ -333,19 +332,11 @@ class LicenseOpenGovernment(DefaultLicense):
 
 class LicenseCreativeCommonsNonCommercial(DefaultLicense):
     id = "cc-nc"
-    url = "http://creativecommons.org/licenses/by-nc/4.0/"
+    url = "http://creativecommons.org/licenses/by-nc/2.0/"
 
     @property
     def title(self):
         return _("Creative Commons Non-Commercial (Any)")
-
-class LicenseCreativeCommonsNonCommercialShareAlike(DefaultLicense):
-    id = "cc-nc-sa"
-    url = "http://creativecommons.org/licenses/by-nc-sa/4.0/"
-
-    @property
-    def title(self):
-        return _("Creative Commons Non-Commercial Share-Alike")
 
 class LicenseOtherNonCommercial(DefaultLicense):
     id = "other-nc"
