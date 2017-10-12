@@ -1,0 +1,20 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('License') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('License'), controller='home', action='license' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+          <h1 class="page-heading">{{ _('License') }}</h1>
+		     {% snippet 'home/snippets/license_text.html' %} 
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
